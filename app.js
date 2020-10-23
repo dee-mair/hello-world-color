@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello, world!').end();
 });
 
-app.get('/color', (req, res) => {
-    res.status(200).send('Red, orange,yellow, green').end();
+app.get('/colour/:id', (req, res) => {
+    res.status(200).send('You requested ' + req.params.id).end();
   });
 
 // Start the server
